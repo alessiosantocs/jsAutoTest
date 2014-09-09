@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<title>Testing</title>
+</head>
+<body ng-app="autoTest">
+	<div ng-controller="TestCtrl">
+<!-- 		<ul>
+			<li ng-repeat="page in pages">
+				<input type="text" ng-model="pages[$index].url" style="width:100%;">
+			</li>
+		</ul> -->
+		<br>
+		<ul>
+			<li ng-repeat="response in finalResponse">
+				<span ng-bind="response.page.url"></span> => <span ng-bind="response.status"></span> (Expecting: <span ng-bind="response.testResult"></span>)
+			</li>
+		</ul>
+		<button ng-click="startTesting()">
+			Start
+		</button>
+	</div>
+</body>
+</html>
