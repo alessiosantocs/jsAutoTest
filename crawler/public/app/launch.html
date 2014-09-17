@@ -24,7 +24,7 @@
 
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
-			
+
 		</div>
 	</nav>
 
@@ -57,7 +57,16 @@
 							</select>
 						</div>
 					</div>
-					<a href="#" class="btn btn-default btn-sm">Trash</a>
+					<a href="#" class="btn btn-danger btn-sm" ng-click="removePage($index);">-</a>
+				</div>
+				<div>
+					<a href="#" ng-click="addPage();" class="btn btn-primary btn-sm">
+						+
+					</a>
+					<a href="#" ng-click="encodeJson();" class="btn btn-primary btn-sm">
+						Public link
+					</a>
+					<div ng-bind="public_link" class="small"></div>
 				</div>
 			</form>
 

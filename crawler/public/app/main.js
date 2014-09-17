@@ -1,12 +1,15 @@
-angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', function TestCtrl ($scope, $http) {
-	
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', '$location', function TestCtrl ($scope, $http, $location) {
+
 	var api_endpoint = "http://localhost:3000/get";
 
-	$scope.pages = [
-					{url: "http://www.pazienti.it", 								expect: "200"},
-					{url: "http://www.pazienti.it/malattie/non-existent-content", 	expect: "404"},
-					{url: "http://www.pazienti.it/malattie/anemia", 				expect: "200"}
-					];
+	$scope.pages = [];
 
 	$scope.finalResponse = [];
 
@@ -18,7 +21,15 @@ angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', functi
 		});
 	};
 
-	$scope.addPage();
+	$scope.removePage = function (index) {
+		$scope.pages.splice(index, 1);
+	};
+
+	$scope.encodeJson = function (){
+		$scope.public_link = "http://localhost:3000/app/launch.html?k=" + escape(JSON.stringify($scope.pages));
+	};
+
+	// $scope.addPage();
 
 	window.hp = $http;
 
@@ -39,7 +50,7 @@ angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', functi
 					expecting: pagina.expect,
 					user_agent: pagina.userAgent
 				}).success(function ajaxGetCallbackFn (response) {
-					
+
 					// The default test result is Passed
 					var result = response.test_result;
 
@@ -54,6 +65,20 @@ angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', functi
 
 		};
 	};
+
+	$scope.init = function(){
+		if(getParameterByName("k")){
+			var array = getParameterByName("k");
+			array = JSON.parse(array);
+			delete array.$$hashKey
+			for (var i = 0; i < array.length; i++) {
+				var page = array[i];
+				$scope.pages.push(page);
+			}
+		}
+	};
+
+	$scope.init();
 }]);
 
 angular.module("autoTest").filter("fromHttpErrorToBootstrapClass", function () {
