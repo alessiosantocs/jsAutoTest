@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<!-- JS -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<title>Testing</title>
+
+	<style type="text/css">
+		.form-inline input.form-control.url-address{
+			width: 500px !important;
+		}
+
+		.line{
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body ng-app="autoTest" style="padding-top: 70px;">
+
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+		</div>
+	</nav>
+
+	<div class="container">
+		<div ng-controller="TestCtrl">
+			<!-- The form to manage the urls to test -->
+			<form class="panel panel-default panel-body form form-inline">
+				<!-- For each page in the array -->
+				<div ng-repeat="page in pages" class="line">
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputEmail2">Page url address</label>
+						<input type="url" class="form-control url-address input-sm" id="exampleInputEmail2" placeholder="Page url address" ng-model="page.url">
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<select class="form-control input-sm" ng-model="page.expect">
+								<option value="">Resp code to expect</option>
+								<option value="200">Success</option>
+								<option value="404">Not found</option>
+								<option value="500">Server error</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<select class="form-control input-sm" ng-model="page.userAgent">
+								<option value="">User agent</option>
+								<option value="mobile_android">Android</option>
+								<option value="chrome_mac">Desktop</option>
+							</select>
+						</div>
+					</div>
+					<a href="#" class="btn btn-default btn-sm">Trash</a>
+				</div>
+			</form>
+
+
+
+
+			<br>
+			<div class="panel panel-default">
+				<!-- Default panel contents -->
+				<div class="panel-heading">
+					<h3 class="panel-title">Test results</h3>
+				</div>
+				<div class="panel-body">
+					<p>Here you get the results of the test.</p>
+				</div>
+
+				<!-- Table -->
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Page url</th>
+							<th>Status</th>
+							<th>Test result</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr ng-repeat="response in finalResponse">
+							<td ng-bind="response.page.url"></td>
+							<td>
+								<span class="label" ng-class="response.status | fromHttpErrorToBootstrapClass" ng-bind="response.status"></span>
+							</td>
+							<td>
+								<span class="label" ng-class="{passed: 'label-success', failed: 'label-danger'}[response.testResult]" ng-bind="response.testResult"></span>
+							</td>
+						</tr>
+
+						<tr ng-hide="finalResponse.length">
+							<td colspan="3">Run the test first</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<button class="btn btn-primary" ng-click="startTesting()">
+				Start
+			</button>
+		</div>
+	</div>
+</body>
+</html>
