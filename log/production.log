@@ -291,3 +291,27 @@ I, [2014-09-18T22:41:58.834106 #30927]  INFO -- : Started POST "/get" for 127.0.
 I, [2014-09-18T22:41:58.835137 #30927]  INFO -- : Processing by RequestsController#get as HTML
 I, [2014-09-18T22:41:58.835467 #30927]  INFO -- :   Parameters: {"url"=>"http://www.pazienti.it", "expecting"=>"200", "user_agent"=>"chrome_mac"}
 I, [2014-09-18T22:41:59.548544 #30927]  INFO -- : Completed 200 OK in 713ms (Views: 0.1ms)
+I, [2014-09-18T23:02:35.675580 #30927]  INFO -- : Started POST "/get" for 127.0.0.1 at 2014-09-18 23:02:35 +0200
+I, [2014-09-18T23:02:35.676778 #30927]  INFO -- : Processing by RequestsController#get as HTML
+I, [2014-09-18T23:02:35.676953 #30927]  INFO -- :   Parameters: {"url"=>"http://www.pazienti.it/cerca?key=linnea", "expecting"=>"200", "user_agent"=>"mobile_android"}
+I, [2014-09-18T23:02:37.322569 #30927]  INFO -- : Completed 200 OK in 1645ms (Views: 0.1ms)
+I, [2014-09-18T23:02:37.323373 #30927]  INFO -- : Started POST "/get" for 127.0.0.1 at 2014-09-18 23:02:37 +0200
+I, [2014-09-18T23:02:37.324343 #30927]  INFO -- : Processing by RequestsController#get as HTML
+I, [2014-09-18T23:02:37.324492 #30927]  INFO -- :   Parameters: {"url"=>"http://www.pazienti.it/risposte/yoga-benefici", "expecting"=>"200", "user_agent"=>"chrome_mac"}
+I, [2014-09-18T23:02:38.062868 #30927]  INFO -- : Completed 200 OK in 738ms (Views: 0.1ms)
+I, [2014-09-18T23:02:38.063571 #30927]  INFO -- : Started POST "/get" for 127.0.0.1 at 2014-09-18 23:02:38 +0200
+I, [2014-09-18T23:02:38.064931 #30927]  INFO -- : Processing by RequestsController#get as HTML
+I, [2014-09-18T23:02:38.065061 #30927]  INFO -- :   Parameters: {"url"=>"http://www.pazienti.it/malattie/anemia", "expecting"=>"200", "user_agent"=>"mobile_android"}
+I, [2014-09-18T23:02:40.698426 #30927]  INFO -- : Completed 200 OK in 2633ms (Views: 0.1ms)
+I, [2014-09-18T23:02:40.699153 #30927]  INFO -- : Started POST "/get" for 127.0.0.1 at 2014-09-18 23:02:40 +0200
+I, [2014-09-18T23:02:40.701081 #30927]  INFO -- : Processing by RequestsController#get as HTML
+I, [2014-09-18T23:02:40.701355 #30927]  INFO -- :   Parameters: {"url"=>"http://www.pazienti.it/malattie/anemia", "expecting"=>"200", "user_agent"=>"chrome_mac"}
+I, [2014-09-18T23:02:41.730495 #30927]  INFO -- : Completed 200 OK in 1029ms (Views: 0.1ms)
+I, [2014-09-18T23:02:41.731131 #30927]  INFO -- : Started POST "/get" for 127.0.0.1 at 2014-09-18 23:02:41 +0200
+I, [2014-09-18T23:02:41.732366 #30927]  INFO -- : Processing by RequestsController#get as HTML
+I, [2014-09-18T23:02:41.732531 #30927]  INFO -- :   Parameters: {"url"=>"http://www.pazienti.it/", "expecting"=>"200", "user_agent"=>"mobile_android"}
+I, [2014-09-18T23:02:44.896347 #30927]  INFO -- : Completed 200 OK in 3164ms (Views: 0.1ms)
+I, [2014-09-18T23:02:44.897197 #30927]  INFO -- : Started POST "/get" for 127.0.0.1 at 2014-09-18 23:02:44 +0200
+I, [2014-09-18T23:02:44.898504 #30927]  INFO -- : Processing by RequestsController#get as HTML
+I, [2014-09-18T23:02:44.898637 #30927]  INFO -- :   Parameters: {"url"=>"http://www.pazienti.it", "expecting"=>"200", "user_agent"=>"chrome_mac"}
+I, [2014-09-18T23:02:45.615602 #30927]  INFO -- : Completed 200 OK in 717ms (Views: 0.1ms)
