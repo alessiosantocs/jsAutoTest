@@ -7,7 +7,10 @@ function getParameterByName(name) {
 
 angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', '$location', function TestCtrl ($scope, $http, $location) {
 
-	var api_endpoint = "http://localhost:3000/get";
+	var api_endpoint = "/get";
+
+  if(getParameterByName("api_endpoint"))
+    api_endpoint = getParameterByName("api_endpoint");
 
 	$scope.pages = [];
 
