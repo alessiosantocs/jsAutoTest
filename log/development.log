@@ -6705,3 +6705,64 @@ Started POST "/get" for 127.0.0.1 at 2014-09-18 08:14:22 +0200
 Processing by RequestsController#get as HTML
   Parameters: {"url"=>"http://www.pazienti.it/risposte/yoga-benefici", "expecting"=>"200"}
 Completed 200 OK in 1084ms (Views: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-18 21:51:19 +0200
+
+LoadError - cannot load such file -- /Users/alessiosanto/projects/jsAutoTest/crawler/config/routes.rb:
+  activesupport (4.0.2) lib/active_support/dependencies.rb:223:in `block in load'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:214:in `load_dependency'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:223:in `load'
+  railties (4.0.2) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.2) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.2) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.2) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.2) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.2) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.2) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:397:in `_run__374919851775817326__prepare__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70093021423500/variables" for 127.0.0.1 at 2014-09-18 21:51:19 +0200
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-18 21:53:01 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/alessiosanto/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 12ms (Views: 11.7ms)
+
+
+Started GET "/get/?url=http://www.pazienti.it" for 127.0.0.1 at 2014-09-18 21:53:06 +0200
+Processing by RequestsController#get as HTML
+  Parameters: {"url"=>"http://www.pazienti.it"}
+Completed 200 OK in 1272ms (Views: 0.1ms)
