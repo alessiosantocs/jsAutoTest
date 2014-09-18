@@ -1,3 +1,5 @@
+require 'net/http'
+
 class RequestsController < ApplicationController
 	# The method to get/crawl pages
 	def get
@@ -25,7 +27,7 @@ class RequestsController < ApplicationController
 	def check_response(response)
 		final_response = {}
 		if response
-			final_response[:status_code] = response.code 
+			final_response[:status_code] = response.code
 			final_response[:test_result] = "failed"
 
 			if response.code == "200"

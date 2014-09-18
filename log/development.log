@@ -6766,3 +6766,9 @@ Started GET "/get/?url=http://www.pazienti.it" for 127.0.0.1 at 2014-09-18 21:53
 Processing by RequestsController#get as HTML
   Parameters: {"url"=>"http://www.pazienti.it"}
 Completed 200 OK in 1272ms (Views: 0.1ms)
+
+
+Started GET "/get/?url=http://www.pazienti.it" for 127.0.0.1 at 2014-09-18 21:55:07 +0200
+Processing by RequestsController#get as HTML
+  Parameters: {"url"=>"http://www.pazienti.it"}
+Completed 200 OK in 1294ms (Views: 0.1ms)

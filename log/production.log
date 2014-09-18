@@ -1,0 +1,33 @@
+I, [2014-09-18T21:56:06.471183 #30927]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-09-18 21:56:06 +0200
+F, [2014-09-18T21:56:06.473093 #30927] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-09-18T21:56:31.020429 #30927]  INFO -- : Started GET "/get/?url=http://www.pazienti.it" for 127.0.0.1 at 2014-09-18 21:56:31 +0200
+I, [2014-09-18T21:56:31.023112 #30927]  INFO -- : Processing by RequestsController#get as HTML
+I, [2014-09-18T21:56:31.023240 #30927]  INFO -- :   Parameters: {"url"=>"http://www.pazienti.it"}
+I, [2014-09-18T21:56:32.753606 #30927]  INFO -- : Completed 200 OK in 1730ms (Views: 0.1ms)
+I, [2014-09-18T22:00:37.151360 #30927]  INFO -- : Started GET "/get/?url=http://www.pazienti.it" for 127.0.0.1 at 2014-09-18 22:00:37 +0200
+I, [2014-09-18T22:00:37.153560 #30927]  INFO -- : Processing by RequestsController#get as HTML
+I, [2014-09-18T22:00:37.153688 #30927]  INFO -- :   Parameters: {"url"=>"http://www.pazienti.it"}
+I, [2014-09-18T22:00:38.984398 #30927]  INFO -- : Completed 200 OK in 1830ms (Views: 0.1ms)
