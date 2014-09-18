@@ -18,8 +18,11 @@ angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', '$loca
 
 
 	$scope.addPage = function () {
+    var url = "";
+    if($scope.pages.length > 0)
+      url = $scope.pages[$scope.pages.length - 1].url;
 		$scope.pages.push({
-			url: "",
+			url: url,
 			expect: ""
 		});
 	};
@@ -29,7 +32,7 @@ angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', '$loca
 	};
 
 	$scope.encodeJson = function (){
-		$scope.public_link = "http://localhost:3000/app/launch.html?k=" + escape(JSON.stringify($scope.pages));
+		$scope.public_link = "http://" + window.location.host + "/app/launch.html?k=" + escape(JSON.stringify($scope.pages));
 	};
 
 	// $scope.addPage();
@@ -38,6 +41,8 @@ angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', '$loca
 
 	$scope.startTesting = function startTestingFn (pages) {
 
+    $scope.editingMode = false;
+    $scope.finalResponse = [];
 
 		// For each page
 		for (var i = $scope.pages.length - 1; i >= 0; i--) {
@@ -70,15 +75,20 @@ angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', '$loca
 	};
 
 	$scope.init = function(){
+    $scope.editingMode = true;
+
+    // If there is a special parameter
 		if(getParameterByName("k")){
 			var array = getParameterByName("k");
 			array = JSON.parse(array);
-			delete array.$$hashKey
+
 			for (var i = 0; i < array.length; i++) {
 				var page = array[i];
 				$scope.pages.push(page);
 			}
-		}
+		}else{
+      $scope.addPage();
+    }
 	};
 
 	$scope.init();
@@ -116,7 +126,6 @@ angular.module("autoTest").filter("fromHttpErrorToBootstrapClass", function () {
 			default:
 				classname = "";
 		}
-		console.log(classname);
 
 		return classname;
 

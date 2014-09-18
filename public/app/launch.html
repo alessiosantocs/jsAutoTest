@@ -18,6 +18,11 @@
 		.line{
 			margin-bottom: 5px;
 		}
+
+		code.block{
+			display: block;
+			word-wrap: break-word;
+		}
 	</style>
 </head>
 <body ng-app="autoTest" style="padding-top: 70px;">
@@ -29,91 +34,100 @@
 	</nav>
 
 	<div class="container">
+		<div class="page-header">
+			<h1>Test your website</h1>
+		</div>
 		<div ng-controller="TestCtrl">
 			<!-- The form to manage the urls to test -->
 			<form class="panel panel-default panel-body form form-inline">
-				<!-- For each page in the array -->
-				<div ng-repeat="page in pages" class="line">
-					<div class="form-group">
-						<label class="sr-only" for="exampleInputEmail2">Page url address</label>
-						<input type="url" class="form-control url-address input-sm" id="exampleInputEmail2" placeholder="Page url address" ng-model="page.url">
-					</div>
-					<div class="form-group">
-						<div class="input-group">
-							<select class="form-control input-sm" ng-model="page.expect">
-								<option value="">Resp code to expect</option>
-								<option value="200">Success</option>
-								<option value="404">Not found</option>
-								<option value="500">Server error</option>
-							</select>
+				<div ng-show="editingMode">
+					<p>
+						Every line is a web page to test. Start crafting your automated test then start and save it (using the 'Public link' button)
+					</p>
+					<!-- For each page in the array -->
+					<div ng-repeat="page in pages" class="line">
+						<div class="form-group">
+							<label class="sr-only" for="exampleInputEmail2">Page url address</label>
+							<input type="url" class="form-control url-address" id="exampleInputEmail2" placeholder="Page url address" ng-model="page.url">
 						</div>
-					</div>
-					<div class="form-group">
-						<div class="input-group">
-							<select class="form-control input-sm" ng-model="page.userAgent">
-								<option value="">User agent</option>
-								<option value="mobile_android">Android</option>
-								<option value="chrome_mac">Desktop</option>
-							</select>
+						<div class="form-group">
+							<div class="input-group">
+								<select class="form-control" ng-model="page.expect">
+									<option value="">Resp code to expect</option>
+									<option value="200">Success</option>
+									<option value="404">Not found</option>
+									<option value="500">Server error</option>
+								</select>
+							</div>
 						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<select class="form-control" ng-model="page.userAgent">
+									<option value="">User agent</option>
+									<option value="mobile_android">Android</option>
+									<option value="chrome_mac">Desktop</option>
+								</select>
+							</div>
+						</div>
+						<a href="#" class="btn btn-danger" ng-click="removePage($index);">-</a>
 					</div>
-					<a href="#" class="btn btn-danger btn-sm" ng-click="removePage($index);">-</a>
+					<hr>
 				</div>
 				<div>
-					<a href="#" ng-click="addPage();" class="btn btn-primary btn-sm">
+					<a href="#" ng-hide="editingMode" ng-click="editingMode = true;" class="btn btn-default">
+						Edit
+					</a>
+					<a href="#" ng-click="addPage();" class="btn btn-default" ng-class="{disabled: !editingMode}">
 						+
 					</a>
-					<a href="#" ng-click="encodeJson();" class="btn btn-primary btn-sm">
+					<a href="#" ng-click="encodeJson();" class="btn btn-default" ng-class="{disabled: !editingMode}">
 						Public link
 					</a>
-					<div ng-bind="public_link" class="small"></div>
+					<button class="btn btn-primary" ng-click="startTesting()" ng-class="{disabled: !editingMode}">
+						Start testing
+					</button>
 				</div>
 			</form>
 
+			<code class="block" ng-bind="public_link" ng-show="public_link"></code>
 
 
 
-			<br>
-			<div class="panel panel-default">
-				<!-- Default panel contents -->
-				<div class="panel-heading">
-					<h3 class="panel-title">Test results</h3>
+			<div ng-show="finalResponse.length">
+
+				<h3>Test results <span ng-hide="pages.length - finalResponse.length == 0">(<b ng-bind="pages.length - finalResponse.length"></b> remaining)</span></h3>
+
+				<div class="panel panel-default">
+
+					<!-- Table -->
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Page url</th>
+								<th>Status</th>
+								<th>Test result</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr ng-repeat="response in finalResponse">
+								<td ng-bind="response.page.url"></td>
+								<td>
+									<span class="label" ng-class="response.status | fromHttpErrorToBootstrapClass" ng-bind="response.status"></span>
+								</td>
+								<td>
+									<span class="label" ng-class="{passed: 'label-success', failed: 'label-danger'}[response.testResult]" ng-bind="response.testResult"></span>
+								</td>
+							</tr>
+
+							<tr ng-hide="finalResponse.length">
+								<td colspan="3">Run the test first</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<div class="panel-body">
-					<p>Here you get the results of the test.</p>
-				</div>
-
-				<!-- Table -->
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Page url</th>
-							<th>Status</th>
-							<th>Test result</th>
-						</tr>
-					</thead>
-
-					<tbody>
-						<tr ng-repeat="response in finalResponse">
-							<td ng-bind="response.page.url"></td>
-							<td>
-								<span class="label" ng-class="response.status | fromHttpErrorToBootstrapClass" ng-bind="response.status"></span>
-							</td>
-							<td>
-								<span class="label" ng-class="{passed: 'label-success', failed: 'label-danger'}[response.testResult]" ng-bind="response.testResult"></span>
-							</td>
-						</tr>
-
-						<tr ng-hide="finalResponse.length">
-							<td colspan="3">Run the test first</td>
-						</tr>
-					</tbody>
-				</table>
 			</div>
 
-			<button class="btn btn-primary" ng-click="startTesting()">
-				Start
-			</button>
 		</div>
 	</div>
 </body>
