@@ -6772,3 +6772,665 @@ Started GET "/get/?url=http://www.pazienti.it" for 127.0.0.1 at 2014-09-18 21:55
 Processing by RequestsController#get as HTML
   Parameters: {"url"=>"http://www.pazienti.it"}
 Completed 200 OK in 1294ms (Views: 0.1ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-23 15:05:43 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/alessiosanto/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 10ms (Views: 10.1ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-23 15:45:57 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/alessiosanto/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-23 15:46:14 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/alessiosanto/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/asfa" for 127.0.0.1 at 2014-09-23 15:46:17 +0200
+
+ActionController::RoutingError (No route matches [GET] "/asfa"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/alessiosanto/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/alessiosanto/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/alessiosanto/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.1ms)
+  Rendered /Users/alessiosanto/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (36.8ms)
+
+
+Started GET "/tests" for 127.0.0.1 at 2014-09-23 15:47:46 +0200
+
+AbstractController::ActionNotFound - The action 'index' could not be found for TestsController:
+  actionpack (4.0.2) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2127423001922829391__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70165036736340/variables" for 127.0.0.1 at 2014-09-23 15:47:47 +0200
+
+
+Started GET "/tests" for 127.0.0.1 at 2014-09-23 15:52:02 +0200
+
+AbstractController::ActionNotFound - The action 'index' could not be found for TestsController:
+  actionpack (4.0.2) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2127423001922829391__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70165036577580/variables" for 127.0.0.1 at 2014-09-23 15:52:02 +0200
+
+
+Started POST "/tests" for 127.0.0.1 at 2014-09-23 15:53:18 +0200
+Processing by TestsController#create as HTML
+  Parameters: {"test"=>{"value"=>"%5B%7B%22url%22%3A%22http%3A//www.pazienti.it%22%2C%22expect%22%3A%22%22%2C%22%24%24hashKey%22%3A%22003%22%7D%5D"}}
+Completed 400 Bad Request in 3ms
+
+ActionController::ParameterMissing - param not found: deployment:
+  actionpack (4.0.2) lib/action_controller/metal/strong_parameters.rb:173:in `require'
+  app/controllers/tests_controller.rb:18:in `test_params'
+  app/controllers/tests_controller.rb:7:in `create'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1521684941129630409__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2127423001922829391__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/tests" for 127.0.0.1 at 2014-09-23 15:53:42 +0200
+Processing by TestsController#create as HTML
+  Parameters: {"test"=>{"value"=>"%5B%7B%22url%22%3A%22http%3A//www.pazienti.it%22%2C%22expect%22%3A%22%22%2C%22%24%24hashKey%22%3A%22003%22%7D%5D"}}
+Mysql2::Error: Table 'jsautotesting_development.tests' doesn't exist: SHOW FULL FIELDS FROM `tests`
+Completed 500 Internal Server Error in 7ms
+
+Mysql2::Error - Table 'jsautotesting_development.tests' doesn't exist:
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:287:in `block in execute'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:435:in `block in log'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:430:in `log'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:287:in `execute'
+  activerecord (4.0.2) lib/active_record/connection_adapters/mysql2_adapter.rb:222:in `execute'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:301:in `execute_and_free'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:462:in `columns'
+  activerecord (4.0.2) lib/active_record/connection_adapters/schema_cache.rb:114:in `block in prepare_default_proc'
+  activerecord (4.0.2) lib/active_record/connection_adapters/schema_cache.rb:56:in `columns'
+  activerecord (4.0.2) lib/active_record/model_schema.rb:208:in `columns'
+  activerecord (4.0.2) lib/active_record/model_schema.rb:249:in `column_defaults'
+  activerecord (4.0.2) lib/active_record/locking/optimistic.rb:169:in `column_defaults'
+  activerecord (4.0.2) lib/active_record/core.rb:171:in `initialize'
+  activerecord (4.0.2) lib/active_record/inheritance.rb:27:in `new'
+  app/controllers/tests_controller.rb:7:in `create'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1521684941129630409__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2127423001922829391__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+  [1m[36m (42.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (27.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateTests (20140923132242)
+  [1m[35m (14.1ms)[0m  CREATE TABLE `tests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `uid` int(11), `value` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140923132242')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started POST "/tests" for 127.0.0.1 at 2014-09-23 15:54:06 +0200
+Processing by TestsController#create as HTML
+  Parameters: {"test"=>{"value"=>"%5B%7B%22url%22%3A%22http%3A//www.pazienti.it%22%2C%22expect%22%3A%22%22%2C%22%24%24hashKey%22%3A%22003%22%7D%5D"}}
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/tests" for 127.0.0.1 at 2014-09-23 15:54:31 +0200
+Processing by TestsController#create as HTML
+  Parameters: {"test"=>{"value"=>"%5B%7B%22url%22%3A%22http%3A//www.pazienti.it%22%2C%22expect%22%3A%22%22%2C%22%24%24hashKey%22%3A%22003%22%7D%5D"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `tests` (`created_at`, `updated_at`, `value`) VALUES ('2014-09-23 13:54:31', '2014-09-23 13:54:31', '%5B%7B%22url%22%3A%22http%3A//www.pazienti.it%22%2C%22expect%22%3A%22%22%2C%22%24%24hashKey%22%3A%22003%22%7D%5D')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/tests" for 127.0.0.1 at 2014-09-23 15:56:53 +0200
+Processing by TestsController#create as HTML
+  Parameters: {"test"=>{"value"=>"%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22%22%2C%22%24%24hashKey%22%3A%22003%22%7D%5D"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `tests` (`created_at`, `updated_at`, `value`) VALUES ('2014-09-23 13:56:53', '2014-09-23 13:56:53', '%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22%22%2C%22%24%24hashKey%22%3A%22003%22%7D%5D')[0m
+  [1m[35mTest Load (7.0ms)[0m  SELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 928 LIMIT 1
+  [1m[36mSQL (4.8ms)[0m  [1mUPDATE `tests` SET `value` = '%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22%22%2C%22%24%24hashKey%22%3A%22003%22%7D%5D', `created_at` = '2014-09-23 13:56:53', `updated_at` = '2014-09-23 13:56:53', `id` = 2, `uid` = 928 WHERE `tests`.`id` = 2[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/tests/928" for 127.0.0.1 at 2014-09-23 15:59:03 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"928"}
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 928 LIMIT 1[0m
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tests/928" for 127.0.0.1 at 2014-09-23 15:59:22 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"928"}
+  [1m[35mTest Load (0.4ms)[0m  SELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 928 LIMIT 1
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tests" for 127.0.0.1 at 2014-09-23 15:59:48 +0200
+Processing by TestsController#create as HTML
+  Parameters: {"test"=>{"value"=>"%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22003%22%2C%22userAgent%22%3A%22mobile_android%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/polli%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22004%22%2C%22userAgent%22%3A%22chrome_mac%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/risposte/yoga-benefici%22%2C%22expect%22%3A%22500%22%2C%22%24%24hashKey%22%3A%22006%22%2C%22userAgent%22%3A%22mobile_android%22%7D%5D"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `tests` (`created_at`, `updated_at`, `value`) VALUES ('2014-09-23 13:59:48', '2014-09-23 13:59:48', '%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22003%22%2C%22userAgent%22%3A%22mobile_android%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/polli%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22004%22%2C%22userAgent%22%3A%22chrome_mac%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/risposte/yoga-benefici%22%2C%22expect%22%3A%22500%22%2C%22%24%24hashKey%22%3A%22006%22%2C%22userAgent%22%3A%22mobile_android%22%7D%5D')
+Mysql2::Error: Data too long for column 'value' at row 1: INSERT INTO `tests` (`created_at`, `updated_at`, `value`) VALUES ('2014-09-23 13:59:48', '2014-09-23 13:59:48', '%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22003%22%2C%22userAgent%22%3A%22mobile_android%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/polli%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22004%22%2C%22userAgent%22%3A%22chrome_mac%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/risposte/yoga-benefici%22%2C%22expect%22%3A%22500%22%2C%22%24%24hashKey%22%3A%22006%22%2C%22userAgent%22%3A%22mobile_android%22%7D%5D')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 7ms
+
+Mysql2::Error - Data too long for column 'value' at row 1:
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:287:in `block in execute'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:435:in `block in log'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:430:in `log'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:287:in `execute'
+  activerecord (4.0.2) lib/active_record/connection_adapters/mysql2_adapter.rb:222:in `execute'
+  activerecord (4.0.2) lib/active_record/connection_adapters/mysql2_adapter.rb:245:in `exec_insert'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:96:in `insert'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/query_cache.rb:14:in `insert'
+  activerecord (4.0.2) lib/active_record/relation.rb:76:in `insert'
+  activerecord (4.0.2) lib/active_record/persistence.rb:509:in `create_record'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:78:in `create_record'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `block in create_record'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__67317249765690810__create__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `create_record'
+  activerecord (4.0.2) lib/active_record/timestamp.rb:57:in `create_record'
+  activerecord (4.0.2) lib/active_record/persistence.rb:477:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `block in create_or_update'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__67317249765690810__save__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/persistence.rb:128:in `save!'
+  activerecord (4.0.2) lib/active_record/validations.rb:57:in `save!'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:41:in `save!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:275:in `block in save!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:326:in `block in with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `block in transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:210:in `within_new_transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:209:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:323:in `with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/transactions.rb:275:in `save!'
+  activerecord (4.0.2) lib/active_record/validations.rb:41:in `create!'
+  app/controllers/tests_controller.rb:7:in `create'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1521684941129630409__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2127423001922829391__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+  [1m[36m (1.0ms)[0m  [1mDROP DATABASE IF EXISTS `jsautotesting_development`[0m
+  [1m[35m (0.4ms)[0m  CREATE DATABASE `jsautotesting_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (9.5ms)[0m  [1mCREATE TABLE `tests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `uid` int(11), `value` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (13.6ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (16.5ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140923132242')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started POST "/tests" for 127.0.0.1 at 2014-09-23 16:00:52 +0200
+Processing by TestsController#create as HTML
+  Parameters: {"test"=>{"value"=>"%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22003%22%2C%22userAgent%22%3A%22mobile_android%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/polli%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22004%22%2C%22userAgent%22%3A%22chrome_mac%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/risposte/yoga-benefici%22%2C%22expect%22%3A%22500%22%2C%22%24%24hashKey%22%3A%22006%22%2C%22userAgent%22%3A%22mobile_android%22%7D%5D"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO `tests` (`created_at`, `updated_at`, `value`) VALUES ('2014-09-23 14:00:52', '2014-09-23 14:00:52', '%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22003%22%2C%22userAgent%22%3A%22mobile_android%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/polli%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22004%22%2C%22userAgent%22%3A%22chrome_mac%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/risposte/yoga-benefici%22%2C%22expect%22%3A%22500%22%2C%22%24%24hashKey%22%3A%22006%22%2C%22userAgent%22%3A%22mobile_android%22%7D%5D')[0m
+Mysql2::Error: Data too long for column 'value' at row 1: INSERT INTO `tests` (`created_at`, `updated_at`, `value`) VALUES ('2014-09-23 14:00:52', '2014-09-23 14:00:52', '%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22003%22%2C%22userAgent%22%3A%22mobile_android%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/polli%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22004%22%2C%22userAgent%22%3A%22chrome_mac%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/risposte/yoga-benefici%22%2C%22expect%22%3A%22500%22%2C%22%24%24hashKey%22%3A%22006%22%2C%22userAgent%22%3A%22mobile_android%22%7D%5D')
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 38ms
+
+Mysql2::Error - Data too long for column 'value' at row 1:
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:287:in `block in execute'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:435:in `block in log'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:430:in `log'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:287:in `execute'
+  activerecord (4.0.2) lib/active_record/connection_adapters/mysql2_adapter.rb:222:in `execute'
+  activerecord (4.0.2) lib/active_record/connection_adapters/mysql2_adapter.rb:245:in `exec_insert'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:96:in `insert'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/query_cache.rb:14:in `insert'
+  activerecord (4.0.2) lib/active_record/relation.rb:76:in `insert'
+  activerecord (4.0.2) lib/active_record/persistence.rb:509:in `create_record'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:78:in `create_record'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `block in create_record'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__67317249765690810__create__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `create_record'
+  activerecord (4.0.2) lib/active_record/timestamp.rb:57:in `create_record'
+  activerecord (4.0.2) lib/active_record/persistence.rb:477:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `block in create_or_update'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__67317249765690810__save__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/persistence.rb:128:in `save!'
+  activerecord (4.0.2) lib/active_record/validations.rb:57:in `save!'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:41:in `save!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:275:in `block in save!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:326:in `block in with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `block in transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:210:in `within_new_transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:209:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:323:in `with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/transactions.rb:275:in `save!'
+  activerecord (4.0.2) lib/active_record/validations.rb:41:in `create!'
+  app/controllers/tests_controller.rb:7:in `create'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1521684941129630409__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2127423001922829391__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/alessiosanto/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateTests (20140923132242)
+  [1m[36m (2.2ms)[0m  [1mDROP TABLE `tests`[0m
+  [1m[35mSQL (3.5ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140923132242'
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateTests (20140923132242)
+  [1m[35m (12.6ms)[0m  CREATE TABLE `tests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `uid` int(11), `value` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140923132242')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started POST "/tests" for 127.0.0.1 at 2014-09-23 16:02:05 +0200
+Processing by TestsController#create as HTML
+  Parameters: {"test"=>{"value"=>"%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22003%22%2C%22userAgent%22%3A%22mobile_android%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/polli%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22004%22%2C%22userAgent%22%3A%22chrome_mac%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/risposte/yoga-benefici%22%2C%22expect%22%3A%22500%22%2C%22%24%24hashKey%22%3A%22006%22%2C%22userAgent%22%3A%22mobile_android%22%7D%5D"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `tests` (`created_at`, `updated_at`, `value`) VALUES ('2014-09-23 14:02:05', '2014-09-23 14:02:05', '%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22003%22%2C%22userAgent%22%3A%22mobile_android%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/polli%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22004%22%2C%22userAgent%22%3A%22chrome_mac%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/risposte/yoga-benefici%22%2C%22expect%22%3A%22500%22%2C%22%24%24hashKey%22%3A%22006%22%2C%22userAgent%22%3A%22mobile_android%22%7D%5D')
+  [1m[36mTest Load (0.4ms)[0m  [1mSELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `tests` SET `value` = '%5B%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/anemia%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22003%22%2C%22userAgent%22%3A%22mobile_android%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/malattie/polli%22%2C%22expect%22%3A%22200%22%2C%22%24%24hashKey%22%3A%22004%22%2C%22userAgent%22%3A%22chrome_mac%22%7D%2C%7B%22url%22%3A%22http%3A//www.pazienti.it/risposte/yoga-benefici%22%2C%22expect%22%3A%22500%22%2C%22%24%24hashKey%22%3A%22006%22%2C%22userAgent%22%3A%22mobile_android%22%7D%5D', `created_at` = '2014-09-23 14:02:05', `updated_at` = '2014-09-23 14:02:05', `id` = 1, `uid` = 3 WHERE `tests`.`id` = 1
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/tests/3" for 127.0.0.1 at 2014-09-23 16:02:12 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTest Load (0.4ms)[0m  SELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/3" for 127.0.0.1 at 2014-09-23 16:02:55 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests/3" for 127.0.0.1 at 2014-09-23 16:03:22 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTest Load (0.4ms)[0m  SELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/3" for 127.0.0.1 at 2014-09-23 16:04:08 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTest Load (0.4ms)[0m  [1mSELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/3" for 127.0.0.1 at 2014-09-23 16:04:10 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTest Load (0.3ms)[0m  SELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests/3" for 127.0.0.1 at 2014-09-23 16:05:03 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTest Load (0.4ms)[0m  [1mSELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/3" for 127.0.0.1 at 2014-09-23 16:05:11 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTest Load (0.4ms)[0m  SELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)

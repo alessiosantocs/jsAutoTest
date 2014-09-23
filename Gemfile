@@ -3,8 +3,11 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-
+# Add adapter for mysql
+gem "mysql2", "~> 0.3.11"
+# Rails api only
 gem 'rails-api'
+
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'

@@ -1,3 +1,5 @@
+// PLEASE ADD COMMENTSSSSSS!!!
+
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -32,12 +34,16 @@ angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', '$loca
 	};
 
 	$scope.encodeJson = function (){
-		$scope.public_link = "http://" + window.location.host + "/app/launch.html?k=" + escape(JSON.stringify($scope.pages));
+    $http.post("/tests", {
+      test:{
+        value: escape(JSON.stringify($scope.pages))
+      }
+    }).success(function (response) {
+		    $scope.public_link = "http://" + window.location.host + "/app/launch.html?k=" + response.uid;
+    });
 	};
 
 	// $scope.addPage();
-
-	window.hp = $http;
 
 	$scope.startTesting = function startTestingFn (pages) {
 
@@ -79,13 +85,20 @@ angular.module("autoTest", []).controller("TestCtrl", ['$scope', '$http', '$loca
 
     // If there is a special parameter
 		if(getParameterByName("k")){
-			var array = getParameterByName("k");
-			array = JSON.parse(array);
+      $http.get("/tests/" + getParameterByName("k")).success(function (response) {
+        var array = unescape(response.value);
+        array = JSON.parse(array);
 
-			for (var i = 0; i < array.length; i++) {
-				var page = array[i];
-				$scope.pages.push(page);
-			}
+
+
+        for (var i = 0; i < array.length; i++) {
+        	var page = array[i];
+          delete page["$$hashKey"]
+        	$scope.pages.push(page);
+        }
+
+        console.log($scope.pages);
+      });
 		}else{
       $scope.addPage();
     }
