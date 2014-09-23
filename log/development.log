@@ -7434,3 +7434,10 @@ Processing by TestsController#show as HTML
   Parameters: {"id"=>"3"}
   [1m[35mTest Load (0.4ms)[0m  SELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1
 Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/3" for 127.0.0.1 at 2014-09-23 22:54:19 +0200
+Processing by TestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTest Load (23.2ms)[0m  [1mSELECT `tests`.* FROM `tests` WHERE `tests`.`uid` = 3 LIMIT 1[0m
+Completed 200 OK in 38ms (Views: 4.0ms | ActiveRecord: 23.2ms)

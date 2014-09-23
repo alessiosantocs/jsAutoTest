@@ -10,7 +10,9 @@
 	<script type="text/javascript" src="main.js"></script>
 	<title>Testing</title>
 
+	<!-- Sorry for this small inline css style -->
 	<style type="text/css">
+		/*Just give the main input form a bigger width*/
 		.form-inline input.form-control.url-address{
 			width: 500px !important;
 		}
@@ -25,27 +27,39 @@
 		}
 	</style>
 </head>
+
+<!-- Initialize the module autoTest declared in main.js -->
 <body ng-app="autoTest">
 
 	<div class="container">
 		<div class="page-header">
 			<h1>Test your website</h1>
 		</div>
+
+
+		<!-- Using the TestCtrl declared in main.js -->
 		<div ng-controller="TestCtrl">
 			<!-- The form to manage the urls to test -->
 			<form class="panel panel-default panel-body form form-inline">
+				<!-- Show only if in editing mode -->
 				<div ng-show="editingMode">
+					<!-- Just a small description -->
 					<p>
 						Every line is a web page to test. Start crafting your automated test then start and save it (using the 'Public link' button)
 					</p>
 					<!-- For each page in the array -->
 					<div ng-repeat="page in pages" class="line">
+						<!-- The first input should be the page url address to be tested -->
 						<div class="form-group">
+							<!-- A fallback label -->
 							<label class="sr-only" for="exampleInputEmail2">Page url address</label>
+							<!-- And finally the main input - This has an ngModel binded to page.url -->
 							<input type="url" class="form-control url-address" id="exampleInputEmail2" placeholder="Page url address" ng-model="page.url">
 						</div>
+						<!-- The next thing is the response code to expect - Default: 200 -->
 						<div class="form-group">
 							<div class="input-group">
+								<!-- A very straight-forward select input -->
 								<select class="form-control" ng-model="page.expect">
 									<option value="">Resp code to expect</option>
 									<option value="200">Success</option>
@@ -54,6 +68,8 @@
 								</select>
 							</div>
 						</div>
+
+						<!-- Next thing is the UserAgent - Right now you have only 2 options -->
 						<div class="form-group">
 							<div class="input-group">
 								<select class="form-control" ng-model="page.userAgent">
@@ -63,37 +79,44 @@
 								</select>
 							</div>
 						</div>
+						<!-- A tiny button to remove the line from the test -->
 						<a href="#" class="btn btn-danger" ng-click="removePage($index);">-</a>
 					</div>
 					<hr>
 				</div>
+				<!-- ./ ends the editing part -->
+
+				<!-- Starts the action buttons part -->
 				<div>
+					<!-- A button to return to editing mode - Only visible when not in editing mode -->
 					<a href="#" ng-hide="editingMode" ng-click="editingMode = true;" class="btn btn-default">
 						Edit
 					</a>
+					<!-- A button to add a new line to the test -->
 					<a href="#" ng-click="addPage();" class="btn btn-default" ng-class="{disabled: !editingMode}">
 						+
 					</a>
+					<!-- A button to request a public link for this test -->
 					<a href="#" ng-click="encodeJson();" class="btn btn-default" ng-class="{disabled: !editingMode}">
 						Public link
 					</a>
+					<!-- And finally a button to actually start a test -->
 					<button class="btn btn-primary" ng-click="startTesting()" ng-class="{disabled: !editingMode}">
 						Start testing
 					</button>
 				</div>
 			</form>
 
+			<!-- Display a generated public link -->
 			<code class="block" ng-bind="public_link" ng-show="public_link"></code>
 
-
-
+			<!-- The final response block - Here information about a runned test will be displayed -->
 			<div ng-show="finalResponse.length">
-
+				<!-- A pane title with a counter that indicates how many requests are left for the test to end -->
 				<h3>Test results <span ng-hide="pages.length - finalResponse.length == 0">(<b ng-bind="pages.length - finalResponse.length"></b> remaining)</span></h3>
 
 				<div class="panel panel-default">
-
-					<!-- Table -->
+					<!-- A basic table with: PageUrl - Status of the request - Test actual result -->
 					<table class="table">
 						<thead>
 							<tr>
@@ -102,18 +125,22 @@
 								<th>Test result</th>
 							</tr>
 						</thead>
-
+						<!-- Response is taken from the finalResponse array -->
 						<tbody>
+							<!-- Add a line for every line in the array a line for a tested page -->
 							<tr ng-repeat="response in finalResponse">
+								<!-- Print the response -->
 								<td ng-bind="response.page.url"></td>
+								<!-- Print the status of the request -->
 								<td>
 									<span class="label" ng-class="response.status | fromHttpErrorToBootstrapClass" ng-bind="response.status"></span>
 								</td>
+								<!-- Print the status of the test -->
 								<td>
 									<span class="label" ng-class="{passed: 'label-success', failed: 'label-danger'}[response.testResult]" ng-bind="response.testResult"></span>
 								</td>
 							</tr>
-
+							<!-- A placeholder just in case the block gets displayed before results are in -->
 							<tr ng-hide="finalResponse.length">
 								<td colspan="3">Run the test first</td>
 							</tr>
@@ -124,5 +151,8 @@
 
 		</div>
 	</div>
+
+	<!-- Just a github badge -->
+	<a href="https://github.com/alessiosantocs/jsAutoTest"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 </body>
 </html>
