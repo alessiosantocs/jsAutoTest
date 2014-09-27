@@ -3,17 +3,19 @@ require 'net/http'
 class RequestsController < ApplicationController
 	# The method to get/crawl pages
 	def get
-
 		response = nil
 
 		if params[:url]
 			uri = URI.parse(params[:url])
 			http = Net::HTTP.new(uri.host, uri.port)
 
+
 			path = uri.path
 			path = "/" if path == ""
+			path += "?#{uri.query}" if uri.query
 
 			req = Net::HTTP::Get.new(path, {'User-Agent' => USERAGENTS[(params[:user_agent] || :chrome_mac).to_sym]})
+
 			response = http.request(req)
 		end
 
