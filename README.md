@@ -10,3 +10,6 @@ Things I want to work on:
 - API hooks
 - CLI API
 - Some simple library for some language
+
+### Contributing
+I would love to hear what YOU would do next :)
